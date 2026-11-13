@@ -1,0 +1,9 @@
+root = "."
+tmp_dir = "tmp"
+
+[build]
+  bin = "main"
+  cmd = "go build -o {{.Output} {.Input}}" # how to build the project
+  exclude = ["tmp/*", "client/*"] # directories to be excluded from monitoring the changes"
+  include = ["**/*.go"]
+  ignore = ["tmp/*"] # files to be ignored when triggering a build
